@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 public class GenerateAIControl {
+
     public void generateAIConfig(String outputDir) {
         File file  = new File(outputDir);
         if (!file.exists()) {

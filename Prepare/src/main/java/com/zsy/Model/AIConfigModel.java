@@ -23,7 +23,7 @@ public class AIConfigModel {
              "    public ChatClient chatClient(OllamaChatModel model, ChatMemory chatMemory) {\n" +
              "        return ChatClient\n" +
              "                .builder(model)\n" +
-             "                .defaultSystem(" + DefaultSystemMessage + "\")\n" +
+             "                .defaultSystem(\"" + DefaultSystemMessage + "\")\n" +
              "                .defaultAdvisors(\n" +
              "                        new SimpleLoggerAdvisor(),\n" +
              "                        new MessageChatMemoryAdvisor(chatMemory)\n" +
