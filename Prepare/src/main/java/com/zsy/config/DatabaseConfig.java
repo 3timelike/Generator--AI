@@ -12,4 +12,5 @@ public class DatabaseConfig {
     private String port;
     private String username;
     private String password;
+    private String databaseName;
 }

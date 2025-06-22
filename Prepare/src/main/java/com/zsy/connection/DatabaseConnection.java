@@ -6,12 +6,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    public static String database(DatabaseConfig databaseConfig) {
+    public static Connection database(DatabaseConfig databaseConfig) {
         // 构造完整URL，包含数据库名和自动创建参数
         String url = "jdbc:mysql://" + databaseConfig.getUrl() + ":" +
-                databaseConfig.getPort() + "/" ;
-//                +databaseConfig.getDatabaseName() +
-//                "?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC";
+                databaseConfig.getPort() + "/" + databaseConfig.getDatabaseName() +
+                "?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC";
 
         String user = databaseConfig.getUsername();
         String password = databaseConfig.getPassword();
@@ -29,7 +28,7 @@ public class DatabaseConnection {
                     System.out.println("连接成功，但未选择数据库");
                 }
 
-                return url;
+                return conn;
             }
         } catch (ClassNotFoundException e) {
             System.err.println("MySQL驱动未找到，请检查依赖：" + e.getMessage());

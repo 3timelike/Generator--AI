@@ -1,4 +1,4 @@
-package com.zsy.contron;
+package com.zsy.control;
 
 import com.zsy.generateTable.GenerateAIControl;
 import com.zsy.generateTable.GenerateChatTableAIConfig;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/createAI")
-public class CreateAICode {
+public class CreateAICodeControl {
 
 
     @GetMapping("/SpringAI")
